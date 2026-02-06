@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remonty i Wykończenia Wnętrz – Warszawa i okolice</title>
+
+    <!-- JEDEN PLIK CSS / MOBILE-FIRST -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <div class="hero">
+      <h1>
+        Remonty mieszkań i wykończenia wnętrz<br />Szybko. Solidnie. Terminowo.
+      </h1>
+      <p>
+        Realizujemy kompleksowe remonty w Warszawie i okolicach.<br />Darmowa
+        wycena w 24h.
+      </p>
+      <a href="#kontakt" class="btn">Zadzwoń / Umów wycenę</a>
+    </div>
+
+    <!-- OFERTA -->
+    <section>
+      <h2>Oferta</h2>
+      <div class="grid grid-4">
+        <div class="box">Remonty mieszkań</div>
+        <div class="box">Wykończenia wnętrz</div>
+        <div class="box">Łazienki pod klucz</div>
+        <div class="box">Malowanie i gładzie</div>
+      </div>
+    </section>
+
+    <!-- DLACZEGO MY -->
+    <section>
+      <h2>Dlaczego my?</h2>
+      <div class="grid grid-4">
+        <div class="box">10+ lat doświadczenia</div>
+        <div class="box">Terminowość</div>
+        <div class="box">Gwarancja</div>
+        <div class="box">Darmowa wycena</div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Imię" />
+        <input type="tel" id="phone" placeholder="Telefon" />
+        <button type="submit" class="btn">Wyślij</button>
+      </form>
+      <p style="text-align: center; margin-top: 16px">
+        <strong>📞 600 123 456</strong>
+      </p>
+    </section>
+
+    <footer>© 2026 Remonty i Wykończenia Wnętrz – Warszawa i okolice</footer>
+
+    <!-- PROSTY JS -->
+    <script>
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+
+        if (!name || !phone) {
+          alert("Uzupełnij imię i numer telefonu");
+          return;
+        }
+
+        alert("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
