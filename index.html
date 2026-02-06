@@ -80,26 +80,12 @@
 
     <!-- PROSTY JS -->
     <script>
-      const form = document.getElementById("contactForm");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-
-        if (!name || !phone) {
-          alert("Uzupełnij imię i numer telefonu");
-          return;
-        }
-
-        alert("Dziękujemy! Skontaktujemy się z Tobą wkrótce.");
-        form.reset();
-      });
       const form = document.querySelector("form");
 
-      form.addEventListener("submit", () => {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // 🔥 TO JEST KLUCZ
         alert("Dziękujemy! Skontaktujemy się wkrótce.");
+        form.reset();
       });
     </script>
   </body>
