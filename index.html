@@ -52,16 +52,15 @@
         data-netlify="true"
         netlify-honeypot="bot-field"
       >
-        <!-- Netlify wymaga tego inputa -->
         <input type="hidden" name="form-name" value="kontakt" />
 
-        <!-- Pole anty-spam -->
         <p style="display: none">
-          <label>
-            Don’t fill this out:
+          <label
+            >Nie wypełniaj tego pola:
             <input name="bot-field" />
           </label>
         </p>
+
         <input type="text" name="name" placeholder="Imię" required />
         <input type="tel" name="phone" placeholder="Telefon" required />
         <textarea
@@ -69,8 +68,10 @@
           placeholder="Opisz zlecenie"
           required
         ></textarea>
+
         <button type="submit">Wyślij</button>
       </form>
+
       <p style="text-align: center; margin-top: 16px">
         <strong>📞 600 123 456</strong>
       </p>
