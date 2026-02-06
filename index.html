@@ -80,14 +80,27 @@
     <footer>© 2026 Remonty i Wykończenia Wnętrz – Warszawa i okolice</footer>
 
     <!-- PROSTY JS -->
-    <script>
-      const form = document.querySelector("form");
+    const form = document.querySelector("form");
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // 🔥 TO JEST KLUCZ
-        alert("Dziękujemy! Skontaktujemy się wkrótce.");
-        form.reset();
-      });
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch("/", {
+    method: "POST",
+    body: formData
+  })
+    .then(() => {
+      alert("Dziękujemy! Skontaktujemy się wkrótce.");
+      form.reset();
+    })
+    .catch((error) => {
+      alert("Ups! Coś poszło nie tak.");
+      console.error(error);
+    });
+});
+
     </script>
   </body>
 </html>
