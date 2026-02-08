@@ -84,7 +84,7 @@ section {
 .box:hover {
   transform: translateY(-2px);
 }
-.ctn1 {
+.cta-center {
   text-align: center;
   margin-top: 32px;
 }
